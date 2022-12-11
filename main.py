@@ -19,7 +19,8 @@ def analize():
             if i == ii:
                 counter += 1
             if counter/len_text*100 > 60: 
-                ui.label_3.setText('Заспамлен!')     
+                ui.label_3.setText('Заспамлен!') 
+                break    #если заспамлен, останавливаем цикл ибо дальше нет смысла проверять
         counter = 0 #сбрасываем счетчик после проверки каждого слова
 
 ui.pushButton.clicked.connect(analize) #привязываем к кнопке функцию анализа текста
